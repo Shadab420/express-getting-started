@@ -1,6 +1,11 @@
 const express = require('express');
 
 const app = express();
+
+//serving static files
+app.use(express.static('public')) //http://localhost:5000/images/apple.jpeg
+
+//port number
 const port = 5000;
 
 app.get('/', (req, res) => {
